@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon, the coolest" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+
+    <!--in-document styling; loads in head so styles apply as content loads-->
+    <style>
+
+        /*in here we must write in CSS*/
+
+        /*SELECTING in CSS & Javascript: select specific element(s) on a page
+                *by ELEMENT type        ex: body, div, p
+                *by ID attribute        ex: #wrapper, #nav, #footer, #title
+                *by CLASS attribute     ex: coming in week 3 :]
+
+        */
+
+        div { /*applies to ALL divs in the page*/
+
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+            margin:5px;/*adds 5px of space between elements (space added outside of border)*/
+
+        }
+
+        #wrapper {/*# specifies ID name, only applies to single element with that ID */
+            background-color:white;
+
+        }
+
+        #nav, #footer {/*can provide list or collection of elements to select*/
+
+            background-color:rgb(200, 200, 200);
+
+        }
+
+        a {/*styles all a (link) tags in page*/
+
+            text-decoration: none; /*removes the underline*/
+            font-size:20px;
+            margin-right:25px; /*adds 25 px of space to the right OF EACH link*/
+
+        }
+
+        /*4 default states --> :link, :hover, :active, :visited*/ 
+        a:hover {
+            color:teal;
+        }
+
+        #footer {
+            font-size:10px;
+            text-align:center;
+        }
+
+    </style>
+
+</head>
+<body style="background-color:grey;">
+    <div id="wrapper"><!--this div holds and "wraps around/together" all content on the page-->
+
+        <h1>Katharine M. Truchon</h1>
+
+        <!--NAVIGATION----------------------------------->
+        <div id="nav">
+            <!--ID names can only be used 1x per page-->
+
+            <!--linking to OUTSIDE pages [not part of webiste] you need the FULL PATH-->
+            <a href="https://www.meca.edu/" target="_blank">Visit MECA</a>
+            <!--href holds the URL of webiste linking to-->
+            <!--target="_blank" opens link in a new tab in browser-->
+
+            <!--IN-PAGE links: linking to sections within the actual page itself (jumping to different sections)-->
+            <a href="#bio">BIO</a>
+            <a href="#school">SCHOOLING</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#footer">Bottom of Page</a>
+
+
+        </div><!--/ #nav-->
+
+        <!--BIO SECTION--------------------------------->
+        <div id="bio"> 
+
+            <h2>About Me</h2>
+
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <!--img tag inserts an image; can be relative files (found within project folder, just need relative address path) or remote files (found elsewhere online, needs full URL address path)-->
+
+            <!--REMOTE img link example-->
+            <!--booooooo remote images are NOT safe-->
+            <img src="https://www.syfy.com/sites/syfy/files/2019/05/ep01_sean_bean_04.jpeg" alt="Eddard Stark outside, holding Ice, contemplating a recent beheading" style="width:500px;">
+
+            <!--required attributes:
+                    *src  provides the path to the image file, either remote or relative
+                    *alt  provides alternative text for written page display if image link is broken OR for accessibility of screenreaders-->
+            
+            <!--RELATIVE img link example-->
+            <img src="images/stormsEnd.jpg" alt="illustration of storm's end during a summer day" style="width:500px;">
+
+        </div><!--/ #bio-->
+
+        <!--SCHOOLING SECTION-------------------------->
+        <div id="school"> 
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+
+
+
+            <img src="images/meca.jpg" alt="MECA Porteous building facade, at night" style="width:500px;">
+
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+
+        </div><!--/ #school-->
+
+        <!--HOBBIES SECTION---------------------------->
+        <div id="hobbies"> 
+
+            <h2>Hobbies</h2>
+
+            <ul>
+                <li>Hobby 1</li>
+                <li>Hobby 2</li>
+                <li>Hobby 3</li>
+            </ul>
+
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+            <br>
+            <br>
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+
+
+        </div><!--/ #hobbies-->
+
+        <!--FOOTER SECTION----------------------------->
+        <div id="footer" >
+            <a href="#wrapper">Back to Top of Page</a>
+            <p>&copy; 2022 | K TRUCHON | SE111.02 [202220]</p>
+
+            <!--VAIDATION IMAGE SCREENSHOT below-->
+            <img src="images/valid.PNG" alt="validation screenshot" style="width:100%;">
+
+        </div><!--/ #footer-->
+
+    </div><!--/ #wrapper-->
+</body>
+</html>
