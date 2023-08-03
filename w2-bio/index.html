@@ -9,18 +9,124 @@
     <meta name="description" content="W2 HW">
 
     <title>W#2 | KT's Bio</title>
+    <!--KT SE111.02 AUG 2 '23-->
+
+
+    <!--additional in-document styling [NOT REQUIRED FOR ASSIGNMENT]-->
+    <style>
+
+        /*write CSS in here!*/
+
+        body {
+
+            background-color:rgb(74, 74, 74);
+            color:white;
+        }
+
+        img {
+
+            border: 3px solid lightslategray;
+            padding: 10px;
+            background-color:white;
+        }
+
+        #header, #footer {
+            text-align:center;
+        }
+
+        a {
+            color:white;
+            font-size:24px;
+            font-family:Helvetica, sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color:rgb(59, 59, 219);
+        }
+
+        .fancy-text {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size:48px;
+            color:lightslategray;
+        }
+
+    </style>
 </head>
 <body>
     
     <!--copied elements from W1 assignment; updates will be available after W2 Bio due date-->
     <div>
 
-        <h1>Katie Truchon</h1>
+        <!--HEADER-->
+        <h1 id="header">Katie Truchon</h1>
+
+        <!--NAV-->
+        <div id="nav">
+
+            <a href="#bio">| BIO |</a>
+            <a href="#schooling">| SCHOOLING |</a>
+            <a href="#hobbies">| HOBBIES |</a>
+            <a href="#footer">| FOOTER |</a>
+
+        </div><!--/ #nav-->
+
+        <!--CONTENT - About Me-->
+        <h2 class="fancy-text">About Me</h2>
+
         <p>Katie was born and raised by two <b>compassionate</b> and <i>patient</i> educators by the seaside in Narragansett, Rhode Island. From an early age she learned a love of animals, cultivates a habit of falling into fantastical worlds through reading, and always tries to carry a camera, notebook, and deck of cards with her.</p>
+
+        <p>Katie an <b><i>Assistant Professor</i></b> of Information Technology <b>and</b> Video Game Design & Development at New England Institute of Technology. She primarily teaches introductory programming and digital graphics courses. Katie currently resides in Warwick with her<u>her pack</u> comprised of Jack, George, & Marlowe. When she is not teaching or hanging out with her four-legged roommates, she enjoys practicing yoga, cooking & baking, gardening, reading, and anything related to art/making.</p> 
 
         <p>She is a super-fan of Game of Thrones and a self-proclaimed nerd.</p>
 
-        <p>She spends most of her time with <u>her pack</u> comprised of Jack, George, and Marlowe.</p>
+        <img src="images/got.jpg" alt="cast of HBO's Game of Thrones" height="250">
+
+
+        <hr>
+
+        <!--CONTENT - Schooling-->
+        <h2 id="schooling" class="fancy-text">Schools</h2>
+
+        <ol>
+            <li>New England Institute of Technology - MSIT <i>May 2023</i></li>
+            <li>Maine College of Art - BFA <i>June 2012</i></li>
+            <li>Narragansett High School - HS Diploma <i>June 2008</i></li>
+        </ol>
+
+        <img src="images/meca.jpg" alt="MECA Porteous Building facade" height="250">
+
+
+        <hr>
+        <!--CONTENT - Hobbies-->
+        <h2 id="hobbies" class="fancy-text">Hobbies</h2>
+
+        <ul>
+            <li><a href="https://www.allrecipes.com/recipe/222247/vegan-black-bean-burgers/">Cooking</a> & <a href="https://www.purelykaylie.com/vegan-cowboy-cookies/">Baking</a></li>
+            <li>Gardening</li>
+            <li>Yoga</li>
+            <li>Hiking</li>
+            <li>Watching TV & Films</li>
+            <li>Reading</li>
+            <li>Crafting & Costuming</li>
+            <li>Live Music</li>
+            <li>Art Galleries & Museums</li>
+        </ul>
+
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRqWAQ4Mxid8pYqikE92gBjZI_P1llZsl2VXndMKOvBWcHwc4h1" height="250">
+
+        <!--FOOTER-->
+        <div id="footer">
+
+            <p>&copy; K TRUCHON | SE111.02 | 202340</p>
+            <a href="#header">| Back To Top |</a>
+
+            <br>
+
+            <img src="images/give-me-a-br-html-jokes-sticker.webp" alt="give me a break element meme" height="250">
+
+        </div><!--/ #footer-->
+
     
     </div>
 

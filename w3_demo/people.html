@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="KT">
+    <meta name="description" content="W3 demo">
+    
+    <title>W3 | PEOPLE</title>
+
+    <!--IN DOCUMENT STYLING: can style  all elements in page-->
+    <style>
+
+        /*we are now writing in CSS*/
+
+        /*SELECTION in CSS or Javascript:
+            selecting an element(s) within the page to do something with them (Styling, actions, applying buttons or functions)
+
+            SELECTION can occur through three main ways:
+
+                *TAG NAME - all tags of this type take the style
+
+                *ID VALUE - only the element with that id takes the style
+
+                *CLASS VALUE - 
+
+        */
+
+        /* ANATOMY OF CSS CODE BLOCKS:
+
+            selector {
+                property: value;
+            }
+        */
+
+
+        div {/*select element by TAG NAME: applies to ALL divs in the page [group]*/
+
+            border:1px solid black;
+            padding:10px; /*space added between element content and border*/
+            margin:5px; /*space added outside of element's border*/
+        }
+
+        #wrapper {/*select element by ID: only element with this id is affected [singular]*/
+            border:1px solid red;
+
+        }
+
+        .border {/*select elements by CLASS: only elements with this class value are affected [group]*/
+
+            border:2px solid darkslategrey;
+
+        }
+
+        #footer, #header, #nav {
+            text-align:center;
+        }
+
+    </style>
+
+
+</head>
+<!--IN-LINE STYLING: only applies to this specific element (and its contents)-->
+<body style="background-color:rgb(192, 191, 191)">
+    
+    <div id="wrapper">
+
+        <!--HEADER-->
+        <div id="header" class="border">
+
+            <h1 id="title" class="fancy">The Last of Us</h1>
+
+        </div><!--/ #header-->
+
+        <!--NAV-->
+        <div id="nav" class="border">
+
+            <!--in-site relative links: to other pages we have made within the site-->
+            <a href="index.html">| HOME |</a>
+            <a href="about.html">| ABOUT |</a>
+            <a href="people.html">| PEOPLE |</a>
+            <a href="places.html">| PLACES |</a>
+
+            <br>
+
+            <!--external link: goes outside of site's domain-->
+            <a href="https://www.hbo.com/the-last-of-us" target="_blank">| Official HBO Site |</a>
+
+            <br>
+
+            <!--in-page jump link: jumps to a section of a page [fragment]-->
+            <a href="#footer">|BOTTOM OF PAGE</a>
+
+        </div><!--/ #nav-->
+
+        <!--CONTENT-->
+        <div id="content" class="border">
+
+            <h2>Content for <b>PEOPLE</b></h2>
+
+            <img src="images/ep2.jpg" alt="episode 2" width="500px;">
+
+        </div><!--/ #content-->
+
+        <!--FOOTER-->
+        <div id="footer" class="border">
+
+            <p>&copy;K TRUCHON | SE111.02 | <span class="fancy">202340</span></p>
+            <br>
+            <a href="index.html#header">| Top of the HOME Page |</a>
+
+        </div><!--/ #footer-->
+
+
+    </div><!--/ #wrapper-->
+
+
+</body>
+</html>
