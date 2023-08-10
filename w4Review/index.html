@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head holds important info for the browser to load the page-->
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 1">
+    <meta name="author" content="K Truchon">
+    <title>HTML | REVIEW</title>
+
+<!--below is in-document styling in CSS-->
+<style>
+
+    /*CSS code*/
+
+    /*selects the "pic-border" class and styles every element inside of it*/
+
+    .pic-border {
+
+
+        border:3px solid grey;
+    }
+
+</style>
+
+</head>
+
+
+
+
+<!--ALL CONTENT of the page is found within the BODY tag-->
+<body>
+    
+    <!--this is a comment in HTML-->
+    <!--comment goes here-->
+    <!--head does NOT include page content-->
+
+    <!--BLOCK LEVEL ELEMENTS: these define the default structure of the HTML page-->
+    <!--"building blocks" of the web page-->
+    <!-- each block level element starts on a new line-->
+    <!--they "look" like actual boxes-->
+
+    <!--link back to the repository index-->
+    <h3><a href="../index.html">Back to SE111 Repository Index</a></h3>
+
+    <!--HEADING TAGS are BLEs that are usually found at the top of sections-->
+    <!--they are larger in font size and bolder than default text-->
+    <h1 id="top">Heading 1</h1>
+    <!--more on IDs in the images section of this page :] -->
+    <!--only ONE h1 per page (they are used to understand the content better for SEO)-->
+    <h2>Heading 2</h2>
+    <h3 style="border:2px solid red;">Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!--Horizontal Rule: also a BLE, it will create a thin black line that runs the entire width of the open browser page-->
+    <!--HRs are considered delimiters: they separate sections of a page-->
+    <hr>
+
+    <!--DIV (short for divider) allows us to group elements together; essentially creating sections-->
+    <!--do not house their own content, they house HTML element content (other elements)-->
+    <div style="border:1px solid blue;">
+
+        <!-- LISTS are BLEs-->
+        <!--ORDERED LISTS create .... ordered lists :] -->
+        <!--UNORDERED LISTS create ... bulleted lists-->
+
+        <h2>Ordered List - Activities I Enjoy</h2>
+        <ol>
+
+            <!--ordered list start-->
+            <!--all list types require list items-->
+            <li>Hiking & Yoga</li>
+            <li>Making Photographs</li>
+            <li>Reading</li>
+            <li>Costumes</li>
+
+
+        </ol>
+
+        <h2>Unordered List - Drinks I Enjoy</h2>
+        <ul>
+            <!--unordered list-->
+            <li>Whiskey</li>
+            <li>Tea</li>
+            <li>Beer</li>
+            <li>Orange Juice</li>
+
+        </ul>
+
+
+
+    </div>
+
+    <hr>
+
+    <h3>Hypertext Links</h3>
+    <!--HYPERTEXT Links: links that move the user to another page either internally or outside of the webpage-->
+    <!--anchor tags <a></a> are used to incorporate links-->
+    <a href="https://www.google.com">Link to Google!</a>
+
+    <h4>Visit the <a href="https://www.neit.edu" target="_blank">NEIT</a> website</h4>
+
+    <!--target attribute opens page in new tab-->
+    <!--DEFAULT LINK STATES: blue = standard link, violet = visted link, red = active link-->
+
+    <hr>
+
+    <!--PARAGRAPH TAG holds longer pieces of text (ie: non-titles)-->
+    <h3>PARAGRAPH TAG</h2>
+    
+    <p style="color:grey;">The North remembers. A <span style="color:gold;">Lannisters</span> always pays his debts. 
+    <br> 
+    <br>
+    And now his watch is ended.A good act does not wash out the bad, nor a bad act the good. Each should have its own reward. The bear and the maiden fair.</p>
+
+    <!--BREAK SPACES <br> allow for new empty lines *in the actual page display-->
+
+    <!--SPAN tags are used IN-LINE with other elements' content, they allow us to separate specific content to be styled on own-->
+
+    <p>Daoruni gimi, Ionos Sonaro. Nuhor lir gurenna. Toli rhuqo lotinti, kostilus. Bantis zobrie issa se ossyngnoti ledys. Skorī demalyti tymptir tymis, erinis ia morghulis.</p>
+
+    
+    <!--INLINE TAGS------------------------------------------------------------------------>
+    <!--change or add information within an exisitng BLE-->
+
+    <p>We can text <b>bold</b> by using the bold/b tag.</p>
+    <p>We can <i>italicize</i> text by using the italics/i tag.</p>
+
+    <!-- * strong and emphasis also add extra meaning for SEO; these tags are pulled for search engine results-->
+
+    <p>We can also make text bold using the <strong>strong</strong> tag*.</p>
+    <p>We can also iyalicie by using the <em>emphasis</em> tag*.</p>
+
+    <p>S&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;E</p>
+
+
+    <!--div (short for divider) are used to create sections in a page-->
+    <!--they contain other elements which hold content-->
+
+    <div id="images">
+        <!--the id attribute is used to create a specific name associated with a particular element.  this makes it easier to style this specific element or select it in javascript-->
+
+        <!--ATTRIBUTES are specific details we add to an element such as id or class names, or styling-->
+
+        <!--ID names are UNIQUE and should only be used 1x ( ONE TIME ) per page (otherwise...they're not unique)-->
+
+
+        <!--the image tag <img> is both a block level AND a inline tag, it can be used both ways!-->
+        <!--it has 2 required attributes: src for source of the file and alt for alternative text, used by search engines optimization to better index content held within the page and for screen readers. it is also displayed if the image file cannot be properly loaded-->
+
+        <!--the src values for the below two images use RELATIVE PATHS ie paths to files found within the root directory of the current file (index.html)-->
+        <img src="images/break_pic.jpg" alt="Empire Records still shot" style="width:500px;" class="pic-border">
+
+        <br>
+        <br>
+
+        <!--CLASSES can be added to elements to group them together-->
+        <!--the in-document styling at the top of the page applies to this class called pic-border-->
+        <!--elements cannot have more than one ID but they can have more than one CLASS-->
+        <img src="images/cashReg.jpg" alt="Empire Records still shot" style="width:500px;" class="pic-border">
+
+        <br>
+        <br>
+
+        <!--the below image uses an ABOSLUTE PATH ie we are using a source path that points to a specific address NOT within the root folder-->
+
+        <img src="https://i2.wp.com/thecasualgeekery.com/wp-content/uploads/2018/03/Empire-Records-Featured.jpg?fit=1024%2C418&ssl=1" alt="Empire Records cast, 1995" style="width:750px;" class="pic-border">
+
+        <!--whenever possible, RELATIVE > ABSOLUTE-->
+    </div>
+
+
+    <div id="footer">
+
+        <!--"jump links" use the anchor tag but connect to a specific ID name on a page, "jumping us to" that point within the page-->
+        <!--we lead the ID name with a # to denote these types of links-->
+        <a href="#top">BACK TO TOP!</a>
+
+        <br>
+        <br>
+
+        <!--we can also link to other pages within the root directory-->
+        <!--to do this, the href value is the name of html file we are linking to (or the relative path to it if it is found in a sub-directory-->
+        <a href="page2.html">PAGE 2</a>
+
+    </div>
+
+</body>
+
+
+</html>
