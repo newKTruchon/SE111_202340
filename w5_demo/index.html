@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="KT">
+    <meta name="description" content="W5 Form demo">
+    
+    <title>W5 Demo | Tables & Forms</title>
+
+</head>
+<body>
+    <h1>Basic Form Demo</h1>
+
+    <!--let browser know we are creating a form-->
+    <form>
+
+        <!--labels are used to match with the input elements-->
+        <!--'for' attribute connects labels with the input values (matching 'name' and 'id' values in the <input>)-->
+
+        <label for="firstName">First Name: </label>
+
+        <input type="text" name="firstName" id="firstName">
+
+        <br>
+
+        <label for="lastName">Last Name: </label>
+
+        <input type="text" name="lastName" id="lastName">
+
+        <br>
+
+        <label for="age">Age: </label>
+
+        <input type="text" name="age" id="age">
+
+
+    </form>
+
+    <p style="width:350px"><i>This form doesn't process and generate a query string because it lacks a SUBMIT button!</i></p>
+
+    <!--this is the way-->
+    <h2>Form Using a Table</h2>
+
+    <form method="GET" action="confirm.html">
+
+        <!--table goes immediately in the form!-->
+        <table>
+
+            <!--table head <th>- for column headers-->
+            <th>
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <h2>Questions</h2>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <h2>Answers</h2>
+                    </td>
+
+                </tr>
+            </th>
+            <!--table body <tbody> - REQUIRED for table content-->
+            <tbody>
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="firstName2">First Name:</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <input type="text" name="firstName2" id="firstName2" required>
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="lastName2">Last Name:</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <input type="text" name="lastName2" id="lastName2" placeholder="Truchon">
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="age2">Age:</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <input type="text" name="age2" id="age2">
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <input type="email" name="email" id="email" placeholder="you@email.com">
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="comments">Comments:</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <textarea name="comments" id="comments" rows="10" cols="20" placeholder="Enter your comment here..." maxlength="10" ></textarea>
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="faveColor">Pick Your Favorite Color: </label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <select name="faveColor" id="faveColor"><!--creates drop-down for choices-->
+
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+
+                        </select>
+                    </td>
+
+                </tr>
+                
+                <tr><!--table row-->
+
+                    <!--left column [labels]-->
+                    <td>
+                        <label for="study">Program of Study</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+                        <input type="radio" name="study" value="se">Software Engineering <br>
+
+                        <input type="radio" name="study" value="cyb">Cybersecurity <br>
+
+                        <input type="radio" name="study" value="wd">Web Development <br>
+                    </td>
+
+                </tr>
+
+                <tr><!--new table row-->
+
+                    <!--left colummn [labels]-->
+                    <td>
+                        <label for="vehicle">Select Your Vehicle</label>
+                    </td>
+
+                    <!--right column [inputs]-->
+                    <td>
+
+                        <input type="checkbox" name="vehicle1" value="car">Car <br>
+
+                        <input type="checkbox" name="vehicle2" value="rocinante">The Rocinante <br>
+
+                        <input type="checkbox" name="vehicle3" value="motorcycle">Motorcycle <br>
+
+                        <input type="checkbox" name="vehicle4" value="bike">Bicycle <br>
+
+                        <input type="checkbox" name="vehicle5" value="dragon">Dragon <br>
+
+                        <input type="checkbox" name="vehicle6" value="horse">Roach the Horse <br>
+
+
+
+                    </td>
+
+                </tr>
+
+                <tr><!--table row-->
+
+                    <!--left colummn [labels]-->
+                    <td>
+                        <label for="date">Date: </label>
+                    </td>
+
+                    <!--right colummn [inputs]-->
+                    <td>
+                        <input type="date" name="date" id="date" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!--left-->
+                    <td>
+                        <!--leave empty to not screw up the table!-->
+                    </td>
+
+                    <!--right-->
+                    <td>
+
+                        <input type="submit" value="SUBMIT !">
+
+                    </td>
+                </tr>
+            </tbody>
+
+            <!--table footer <tfoot> - for summations etc-->
+
+
+
+        </table>
+
+
+    </form>
+
+
+    <p style="width:350px"><i>The W5 confirm.html file and script.js file has been added to this demo's root folder, so clicking on the <b>SUBMIT !</b> will show you an example of what should happen when the assignment is written correctly.</i></p>
+
+</body>
+</html>
