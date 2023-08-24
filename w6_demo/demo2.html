@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="KT">
+    <meta name="description" content="W6 Demo - Second Intro to JS">
+
+    <title>W6 | Demo #2</title>
+</head>
+<body>
+
+    <h1>Week 6 - Secondary Javascript Demo</h1>
+    <h3><i>Conditions & Functions</i></h3>
+
+    <!--in document js-->
+    <script>
+        //in here we write in js
+
+        //prompt user for yes or no response
+        var pref = prompt(`Welcome to Good Burger, home of the good burger, may I take your order? \nType "yes" or "no"`)
+
+        //functio below checks prompt/input value supplied by user and then returns a dining preference type 
+
+        //function definition below 
+        function checkDining(_pref) 
+        {
+            //conditions or conditional statements are held inside of ( ) in js
+            //=== is exactly equal in both value AND data type
+            if (_pref.toLowerCase() === `yes`)
+            {
+                //want to order
+                var dining = prompt(`Would you like to dine in or take out?\nType "in" or "out"`)
+
+                if (dining.toLowerCase() === `in`)
+                {
+                    //dining in
+                    return dining.toLowerCase()
+                }
+                else if (dining.toLowerCase() === `out`)
+                {
+                    //take out 
+                    return dining.toLowerCase()
+                }
+                else
+                {
+                    //invalid entry
+                    return `bad` //bad value
+                }
+            }
+            else if (_pref.toLowerCase() === `no`)
+            {
+                //dont want to order
+                alert(`You have poor taste.`)
+                return 0
+            }
+            else 
+            {
+                //didnt follow directions / unexpected input value
+                alert(`UH OH! Invalid Entry!\nPlease reload and re-read directions :]`)
+                return `bad`
+            }
+
+        }
+
+        //call checkDining to find value / what user wants to do 
+        var decision = checkDining(pref)
+
+        if (decision == 0)
+        {
+            alert(`Okay, goodbye.`)
+        }
+        else if (decision == `bad`)
+        {
+            alert(`Please reload`)
+        }
+        else 
+        {
+            alert(`Plz tell me your order...`)
+        }
+
+    </script>
+    
+</body>
+</html>
