@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W7 Day 1 Examples</title>
+
+</head>
+<body>
+    
+    <h1 id="header">
+        This is a header
+   </h1>
+   <div id="nav">
+         This is the nav
+   </div>
+
+   <p id="h">Hello</p>
+   <p id="ga">Good afternoon</p>
+   <p id="gb">goodbye</p>
+
+
+   <script>
+     var p = document.querySelector(`#gb`)
+     console.log(p) //logs the tag into the console formatted as HTML
+
+     p.id = "goodbye"
+
+     console.log(p)
+
+   </script>
+</body>
+</html>
