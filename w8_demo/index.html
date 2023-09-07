@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 | JS Data Structures</title>
+</head>
+<body>
+
+    <h1>W8 Javascript Demo | Arrays & Objects</h1>
+
+    <div id="output">
+        <!--eventally we will write info in here via JS to display-->
+    </div>
+
+    <!--IN DOCUMENT JAVASCRIPT BELOW-->
+    <script>
+
+        //basic key + value pair --> variableName = dataValue 
+        var name = `Katie`
+        console.log(`Variable: ${name}`) //displays value stored to simple var
+
+        //ARRAYS----------------------------------------------
+        //key --> [index], [i]
+
+        //create a new populated array 
+        //to just create: var people = []
+        var people = [
+            `Katie`,
+            `Toni`,
+            `Dave`
+        ]
+
+        console.log(`Array: ${people}`) //entire collection of data
+        console.log(`First value of Array: ${people[0]}`) //one  value within array 
+        //arrayName[index] --> name + key = value 
+        console.log(`The length of the people array is: ${people.length}`)
+
+        //you can store a single value back into a var
+        var firstPerson = people[0]
+        console.log(`First person in array: ${firstPerson}`)
+
+        //add a value to the array, adds at end/nex index
+        people.push(`Brad`)
+        console.log(`Array: ${people}`) //entire collection of data
+
+        //another helpful native property for array types --> .length, returns # of items in an array object
+        console.log(`The length of the people array is: ${people.length}`)
+
+        //ask the user to add a name to the array 
+        people.push(prompt(`Enter a name for the array: `))
+        console.log(`Array: ${people}`) //entire collection of data
+
+        //PARALLEL ARRAY --------------------------------------
+        //another 1D array whose data is connected to the other array
+        //data stays connected via matching index! 
+        var color = [ 
+            `grey`,
+            `purple`, 
+            `black`, 
+            `blue`, 
+            `green`
+        ]
+
+        console.log(`${people[3]}'s favorite color is ${color[3]}!`)
+
+        var age = []
+
+        //PROCESSING ARRAYS ----- see all data from 1 or multiple parallel arrays at once 
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`${people[index]}'s favorite color is ${color[index]}!`)
+            age.push(
+                prompt(`How old is ${people[index]}?`)
+            )
+        }
+
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`${people[index]}'s age is ${age[index]}!`)
+          
+        }
+
+        /* same idea with a while loop: 
+
+            var index = 0 
+            while(index < people.length)
+            {
+                //do something
+                index = index + 1
+            }
+        
+        */
+        //ADDING DATA TO THE HTML PAGE
+        //first, store element which will hold intended output into JS
+        var output = document.querySelector(`#output`)
+
+        //process throug the array to add each item to the page
+        for(let index = 0; index < people.length; index++)
+        {
+            output.innerHTML += `${people[index]}'s age is ${age[index]} and favorite color is ${color[index]}! <br>`
+          
+        }
+
+        //OBJECTS in JS ------------------------------------------------
+        //objects can handle MIXED DATA TYPES :D
+        var person1 = {
+            first: `Dave`, 
+            last: `LeClair`,
+            age: 19, 
+            pets: false, 
+            greeting: function() {
+                alert(`Hello from ${this.first}!`)
+            },
+            classes: [`SE111`, `CYB123`, `NE121`]
+        }
+
+        //view all data within the object [processing a data structure]
+        for(let key in person1){
+            //"for property in object"
+            console.log(`${key}: ${person1[key]}`)
+
+        }
+
+        //we can reuse property name's for objects
+        var person2 = {
+            first: `Toni`, 
+            last: `Konan`,
+            age: 21, 
+            pets: false, 
+            greeting: function() {
+                alert(`Hello from ${this.first}!`)
+            },
+            classes: [`SE111`, `SE126`, `NE121`]
+        }
+
+
+        //let's put it all together 
+        //in order to process  data structure populated with data structures --> we need LOOPCEPTION (loop inside of a loop)
+
+        //create array populated with objects
+        var humans = [
+            person1, //dave
+            person2 //toni
+        ]
+
+        //empty string for writing to HTML @ end
+        var newOutput = ``
+
+        console.log(`hi`)
+        //process through the array first 
+        for(let i = 0; i < humans.length; i++)
+        {
+            //this loop controls which array value (object)
+            newOutput += `<h3>INFO FOR: ${humans[i].first}:</h3>`
+            humans[i].greeting()
+
+            for(let key in humans[i])
+            {
+                //this loop goes through the individual object found at current index in array 
+
+                newOutput += `<p><b>${key}:</b> ${humans[i][key]} </p>`
+                console.log(`hiii`)
+            }
+
+            //display a horizonal rule under each object
+            newOutput += `<hr>`
+            
+        }
+
+        //write the info the page
+        document.querySelector(`#output`).innerHTML += newOutput
+
+
+
+    </script>
+    
+</body>
+</html>
