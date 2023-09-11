@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="KT">
+    <meta name="description" content="W6 JS Pay Calc">
+
+    <title>W6 | Javascript Calculator</title>
+</head>
+<body>
+
+    <!--
+
+        You will use in-document Javascript to complete this assignment so an index.html will be the necessary file.  Create a root folder named "w6" and save your index.html there.
+
+        Instructions:
+
+        You want to develop a JavaScript program that gathers the user’s hourly pay and hours worked for a two-week period. You will use the prompt() function in order to gather this information. Use 20% for the tax rate.
+            IMPORTANT: The prompt() function only returns strings. Numbers collected from the prompt will need to be cast as a Number() in order to be calculated. In addition, messages in the prompt can utilize escape characters such as `\n` to create a new line.
+        Once you have this information, you will to display the user’s GrossPay, Uncle Sam’s Share, and the User’s Net Pay. You will use one alert() function as well as three console.log() calls to display this information. This will allow you to view the totals both in a pop up as well as the browsers console debugging tool.
+        The output within the console and alert box should be formatted to read:
+
+            Gross Pay: $1000.00
+            Uncle Sam's Share: $200.00
+            Net Pay: $800.00
+
+        All calculations should be limited to run once, rather than numerous times.  
+        All displayed values should be rounded to the second decimal place
+            Use the .toFixed(2) method
+            https://www.w3schools.com/JSREF/jsref_tofixed.asp 
+
+    -->
+
+    <h1>W6 | Javascript Pay Calculator</h1>
+    <h4><a href="../index.html">Back to KT's site index</a></h4>
+
+    <!--IN-DOCUMENT JAVASCRIPT-->
+    <script>
+
+        //We write Javascript in here 
+
+        //gathers the user’s hourly pay and hours worked for a two-week period. -- prompt() returns strings so cast return as a Number()
+        var name = prompt(`Hello there and welcome to the Pay Calculator! \nWhat is your name?`)//not required
+
+        var hours = Number(prompt(`Thanks ${name}. Please enter your hours worked for the 2 week period: `))
+        var rate = Number(prompt(`Working hard or hardly working? ;]\nNext please provide your hourly rate: `))
+
+        //gross pay calculation
+        var gross = hours * rate 
+
+        //optional to ask for tax percentage
+        var tax = prompt(`This program is built for a 20% tax rate. \nIf you wish to use this, enter 'Y' below. \nIf you would like to use a different tax percentage, please enter it below.\n(for 15%, enter 15)`)
+
+
+        //used a simple conditional based on previous tax question 
+        if(tax.toUpperCase() == 'Y')
+        {
+            //if the uppercase equivalent of user's response is 'Y', treat tax as 20%
+            var taxAmount = gross * 0.2
+        }
+        else 
+        {
+            //otherwise, cast tax as a number and use in the calculation instead
+            var taxAmount = gross * (Number(tax)/100)
+        }
+
+        //net pay calculation
+        var net = gross - taxAmount
+
+        //displaying to console to check values
+        console.log(`Gross Pay: $${gross.toFixed(2)}`)
+        console.log(`Tax Amount: $${taxAmount.toFixed(2)}`)
+        console.log(`Net Pay: $${net.toFixed(2)}`)
+
+        //alert() so user can see the values
+        alert(
+            `Thanks for the info ${name}, your Pay Calculation report is available below: 
+            \nHOURS WORKED: ${hours}hrs   |    HOURLY RATE: $${rate.toFixed(2)}/hr
+            GROSS PAY: $${gross.toFixed(2)}
+            TAX AMOUNT: $${taxAmount.toFixed(2)}
+            NET PAY: $${net.toFixed(2)}
+
+            \nThanks for using the Pay Calculator, have a great day! 
+            [Press 'OK' to quit this message]`
+        )
+    </script>
+    
+</body>
+</html>
