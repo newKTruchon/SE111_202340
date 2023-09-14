@@ -17,33 +17,42 @@
    <!--each <input> must have an id that matches its corresponding label -->
    <!--each form element is separated by a break space (new line) -->
     <form>
-        <label for="first">First Name: </label>
-        <input type="text" id="first">
+        <table>
 
-        <br>
+            <tr>
 
-        <label for="last">Last Name: </label>
-        <input type="text" id="last">
-
-        <br>
-
-        <label for="hours">Hours Worked: </label>
-        <input type="text" id="hours">
-
-        <br>
-
-        <label for="rate">Hourly Rate: </label>
-        <input type="text" id="rate">
-
-        <br>
-
-        <br>
+            
+                <td><label for="first">First Name: </label></td>
+                <td><input type="text" id="first"></td>
+            </tr>
 
 
+            <tr>
+                <td><label for="last">Last Name: </label></td>
+                <td><input type="text" id="last"></td>
+            </tr>
 
-        <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="enter-button" value="Enter">
+            <tr>
+                <td><label for="hours">Hours Worked: </label></td>
+                <td><input type="text" id="hours"></td>
+            </tr>
 
+            <tr>
+
+                <td><label for="rate">Hourly Rate: </label></td>
+                <td><input type="text" id="rate"></td>
+            </tr>
+
+
+            <br>
+
+
+            <tr>
+                <td></td>
+                <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
+                <td><input type="button" id="enter-button" value="Enter"></td>
+            </tr>
+        </table>
         <br>
         <br>
 
